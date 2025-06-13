@@ -1,0 +1,11 @@
+
+.main{
+    margin-top: 20px;
+}
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+}
