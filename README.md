@@ -10,14 +10,9 @@ A simple and interactive To-Do List web application built with **HTML**, **CSS (
 - ✔️ Mark tasks as completed (strikethrough effect)
 - 🎯 Clean, responsive UI using Bootstrap
 
-## 📸 Demo
-
-![Screenshot](screenshot.png) <!-- Add a screenshot of your app and rename the image file accordingly -->
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML, CSS (Bootstrap), JavaScript
-- **Frameworks:** None — vanilla JS only
+- HTML, CSS (Bootstrap), JavaScript
 
-## 📂 Project Structure
 
