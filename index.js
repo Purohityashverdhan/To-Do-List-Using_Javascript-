@@ -1,56 +1,23 @@
-// const addbtn=document.getElementById('addBtn');
-// const taskinput=document.getElementById('taskInput');
-// const tasklist=document.getElementById('taskList');
+const taskInput = document.getElementById('taskInput');
+const addTaskBtn = document.getElementById('addBtn');
 
-// addbtn.addEventListener('click',()=>{
-//     if(taskinput.value===''){
-//         alert('Please enter a task');
-//         return;
-//     }
-//     let li=document.createElement('li');
-//     li.innerText=taskinput.value;
-//     tasklist.appendChild(li);
-//     taskinput.value='';
-//     let completedBtn=document.createElement('button');
-//     completedBtn.innerText='Completed';
-//     li.appendChild(completedBtn);
-//     li.className='d-flex justify-content-between my-2';
-//     completedBtn.className='btn btn-danger';
-//     completedBtn.addEventListener('click',()=>{
-//         li.style.textDecoration='line-through';
-//     })
-// });
+addTaskBtn.disabled = true; // Disable on page load
 
-// function addTask(){
-//     const taskinput=document.getElementById('taskInput');
-//     const tasklist=document.getElementById('taskList');
-//     if(taskinput.value===''){
-//         alert('Please enter a task');
-//         return;
-//     }
-//     let li=document.createElement('li');
-//     li.innerText=taskinput.value;
-//     tasklist.appendChild(li);
-//     taskinput.value='';
-//     let completedBtn=document.createElement('button');
-//     completedBtn.innerText='Completed';
-//     li.appendChild(completedBtn);
-//     li.className='d-flex justify-content-between my-2';
-//     completedBtn.className='btn btn-danger';
-//     completedBtn.addEventListener('click',()=> {
-//         li.style.textDecoration = 'line-through';
-//     });
-// }
-
+taskInput.addEventListener('input', () => {
+    const trimmedValue = taskInput.value.trim();
+    addTaskBtn.disabled = trimmedValue === '';
+});
 
 function addTask() {
-    const taskInput = document.getElementById('taskInput');
     const taskList = document.getElementById('taskList');
 
-    if (taskInput.value === '') {
-        alert('Please enter a task');
-        return;
-    }
+
+    addTaskBtn.disabled = true;
+
+    taskInput.addEventListener('input', () => {
+        const trimmedValue = taskInput.value.trim();
+        addTaskBtn.disabled = trimmedValue === '';
+    });
 
     const li = document.createElement('li');
     li.className = 'd-flex justify-content-between align-items-center my-2';
@@ -86,6 +53,7 @@ function addTask() {
     taskList.appendChild(li);
 
     taskInput.value = '';
+    addTaskBtn.disabled = true;
 }
 
 function deleteTask(taskElement) {
